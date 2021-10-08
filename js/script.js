@@ -159,13 +159,13 @@ for (let i=0; i < inputAll.length; i++) {
 
 //Show hints depending on validation results
 function hintRequired (element) {
-    element.parentElement.className = 'not-valid';
+    element.parentElement.classList.add('not-valid');
     element.parentElement.classList.remove('valid');
     element.parentElement.lastElementChild.style.display = 'block';
 }
 
 function hintNotRequired (element) {
-    element.parentElement.className = 'valid';
+    element.parentElement.classList.add('valid');
     element.parentElement.classList.remove('not-valid');
     element.parentElement.lastElementChild.style.display = "none";
 }
