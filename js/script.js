@@ -140,11 +140,11 @@ form.addEventListener('submit', e => {
         e.preventDefault();
     }
     
-    if (!isZipValid()) {
+    if (creditCard.style.display === '' && !isZipValid()) {
         e.preventDefault();
     }
     
-    if (!isCvvValid()) {
+    if (creditCard.style.display === '' && !isCvvValid()) {
         e.preventDefault();
     }
 });
