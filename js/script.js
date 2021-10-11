@@ -120,12 +120,15 @@ function isEmailValid() {
     if (isEmpty) {
         hintRequired(email);
         email.parentElement.lastElementChild.innerHTML = 'Email field cannot be blank';
+        return false;
     } else if (!isValid) {
         hintRequired(email);
         email.parentElement.lastElementChild.innerHTML = 'Email address must contain @ sign and end with ".com"';
-    } else hintNotRequired(email);
-    
-    return true;
+        return false;
+    } else {
+        hintNotRequired(email);
+        return true;
+    }
 }
 
 // Checks if at least one activity is selected
